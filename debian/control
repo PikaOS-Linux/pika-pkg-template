@@ -1,0 +1,16 @@
+Source: upstream-name
+Section: admin
+Priority: optional
+Maintainer: name <email>
+Standards-Version: 4.6.1
+Build-Depends: debhelper-compat (= 13)
+Rules-Requires-Root: no
+
+Package: pkgname1
+Architecture: linux-any
+Depends: ${misc:Depends}, depends
+Recommends: high priority optdepends
+Conflicts: conflicts
+Suggests: low priority optdepends
+Breaks: also conflicts!?
+Description: pkgdesc
