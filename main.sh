@@ -3,7 +3,7 @@
 DEBIAN_FRONTEND=noninteractive
 
 # Add dependent repositories
-wget -q -O - url-of-pika-sources.deb | sudo apt install -
+wget -q -O - url-of-pika-sources.deb | sudo apt install - --yes --option Acquire::Retries=5 --option Acquire::http::Timeout=100 --option Dpkg::Options::="--force-confnew"
 # Clone Upstream
 mkdir -p ./debian ./src-pkg-name
 
