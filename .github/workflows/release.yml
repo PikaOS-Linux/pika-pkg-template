@@ -29,6 +29,9 @@ jobs:
         name: id_rsa
         known_hosts: ${{ secrets.KNOWN_HOSTS }}
         if_key_exists: replace
+
+    - name: Update apt cache
+      run: apt-get update -y
     
     - name: Build Package
       run: ./main.sh
