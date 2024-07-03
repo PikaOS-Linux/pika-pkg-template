@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2023 PikaOS
+Copyright (c) 2024 PikaOS
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +19,6 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+Notes:
+The files covered by this license are any files and directories in the root of this repository (including but not limited to: `main.sh`, `release.sh`, and `.github`), with the exception of the `debian` directory and its contents if `debian/copyright` exists, and declares any files or directories as a different LICENSE/COPYRIGHT.
