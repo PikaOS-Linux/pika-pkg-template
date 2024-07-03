@@ -1,4 +1,4 @@
-MIT License
+MIT License (With DPKG packaging compatibility)
 
 Copyright (c) 2024 PikaOS
 
