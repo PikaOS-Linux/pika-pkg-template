@@ -1,5 +1,9 @@
 #! /bin/bash
 
+set -e
+
+VERSION="1.0"
+
 export DEBIAN_FRONTEND="noninteractive"
 export DEB_BUILD_MAINT_OPTIONS="optimize=+lto -march=x86-64-v3 -O3 -flto -fuse-linker-plugin -falign-functions=32"
 export DEB_CFLAGS_MAINT_APPEND="-march=x86-64-v3 -O3 -flto -fuse-linker-plugin -falign-functions=32"
@@ -15,6 +19,7 @@ cp -rvf ./debian ./src-pkg-name/
 cd ./src-pkg-name/
 
 # Get build deps
+LOGNAME=root dh_make --createorig -y -l -p src-pkg-name_"$VERSION" || echo "dh-make: Ignoring Last Error"
 apt-get build-dep ./ -y
 
 # Build package

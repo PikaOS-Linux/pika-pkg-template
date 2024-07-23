@@ -1,4 +1,4 @@
-upstream-name (pkgver-pkgrel) distro_codename; urgency=medium
+upstream-name (1.0-101pika1) pika; urgency=medium
 
   * Initial release. (Closes: #nnnn)  <nnnn is the bug number of your ITP>
 

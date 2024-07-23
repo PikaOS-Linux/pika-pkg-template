@@ -4,20 +4,6 @@
 ## Output every command that modifies files on the build system.
 export DH_VERBOSE = 1
 
-## === Set paths env vars ===
-
-## Source directory, called upon by $(srcdir)
-srcdir = $(shell debian/scripts/get_pwd.sh)
-## The Root of package number one, called upon by $(pkgdir1)
-pkgdir1 = $(srcdir)/debian/pkgdir1
-## The Root of package number two, you can add as many of these as you like
-pkgdir2 = $(srcdir)/debian/pkgdir2
-
-## If building a singular package you can remove the number, and as you guessed you call upon it with $(pkgdir)
-# pkgdir = $(srcdir)/debian/pkgdir
-
-## === End end of region ===
-
 ## === the chain of command ===
 ## debuild runs a chain of dh functions in the following order:
 ## dh_testdir
@@ -70,8 +56,8 @@ pkgdir2 = $(srcdir)/debian/pkgdir2
 
 ## overriding dh_install to install files to a package:
 #override_dh_auto_configure:
-#		mkdir -p $(pkgdir1)/usr/bin
-#		cp $(srcdir)/pikman $(pkgdir1)/usr/bin/
+#		mkdir -p debian/pikman/usr/bin
+#		cp pikman debian/pikman/usr/bin/
 
 ## === End end of region ===
 
